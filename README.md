@@ -40,18 +40,7 @@ The final model predicts survival with high accuracy on the training data and pe
 Class: Higher-class passengers had better survival rates.
 Sex: Females had a higher chance of survival.
 Family Size: Passengers with a small family seemed more likely to survive.
-Project Files
-Here’s what’s included in this repo:
 
-plaintext
-Copy code
-Titanic-Survival-Prediction/
-├── data/                    # Contains raw data files
-├── submission.csv           # Kaggle submission file with predictions
-├── Titanic_Prediction.ipynb # Jupyter Notebook with code and analysis
-├── README.md                # Project description (this file)
-Takeaways and Next Steps
-This project was a great way to practice the whole machine learning workflow. I’d like to experiment with other models, maybe fine-tune the Random Forest with hyperparameters or try boosting techniques.
 
 Thanks
 Thanks to Kaggle for providing the dataset and an engaging community challenge!
