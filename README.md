@@ -10,8 +10,17 @@ This repository showcases the various data analysis projects I have worked on, d
      - Data Cleaning & Preprocessing
      - Feature Engineering
      - Logistic Regression Model
-     - Data Visualization (Power BI)
      - Model Evaluation and Accuracy Testing
+
+2. **Bitcoin Price Prediction: Forecasting Bitcoin Prices**
+- **Description**: This project aims to predict Bitcoin’s closing price using historical minute-level price data. The model employs machine learning techniques, specifically RandomForestRegressor, to forecast future Bitcoin prices based on                       time-series data and key features.
+- **Skills Demonstrated**:
+   - Data Cleaning & Preprocessing
+   - Feature Engineering (Time-based features, Moving Averages)
+   - Random Forest Regressor Model
+   - Model Evaluation and Accuracy Testing
+   - Data Visualization (Power BI)
+
 
 ### Skills
 
