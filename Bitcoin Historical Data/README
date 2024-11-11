@@ -21,10 +21,6 @@ Trained a RandomForestRegressor model to predict Bitcoin's Close price.
 Applied SimpleImputer to handle any remaining missing values before model training.
 Evaluated the model using Mean Absolute Error (MAE) and R-squared (R²) to assess its predictive accuracy.
 
-Data Visualization with Power BI:
-Imported the predictions (actual vs. predicted) into Power BI.
-Created interactive visualizations comparing actual vs. predicted Bitcoin prices.
-Built additional insights using error analysis (predicted error) and summary statistics.
 
 Model Saving and Export:
 Saved the trained RandomForestRegressor model as a .pkl file, allowing for reuse without retraining.
