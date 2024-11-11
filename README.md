@@ -19,7 +19,6 @@ This repository showcases the various data analysis projects I have worked on, d
    - Feature Engineering (Time-based features, Moving Averages)
    - Random Forest Regressor Model
    - Model Evaluation and Accuracy Testing
-   - Data Visualization (Power BI)
 
 
 ### Skills
