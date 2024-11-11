@@ -1,1 +1,75 @@
-Project in progress
+Bitcoin Price Prediction Project
+Overview
+This project aims to predict Bitcoin’s closing price using historical data. The dataset includes minute-level price data and is used to train a RandomForestRegressor model to predict future prices. The project includes various stages of data processing, feature engineering, and model evaluation.
+
+In addition to the predictive model, I used Power BI for data visualization, enabling insights into the prediction performance and Bitcoin price trends.
+
+Key Steps
+
+Data Loading:
+Loaded the Bitcoin historical data from Kaggle using the dataset btcusd_1-min_data.csv.
+Performed basic data inspection, including checking for missing values and understanding the dataset structure.
+Data Preprocessing:
+
+Handling Missing Values: 
+Employed forward-filling to handle missing values, ensuring continuity in time-series data.
+Outlier Detection: Used Z-Score and Interquartile Range (IQR) methods to identify and treat outliers.
+Feature Engineering: Created time-based features such as hour, day, weekday, and month from the Timestamp column. Calculated the 7-day moving average of the Close price to smooth fluctuations and measure volatility.
+
+Model Building:
+Trained a RandomForestRegressor model to predict Bitcoin's Close price.
+Applied SimpleImputer to handle any remaining missing values before model training.
+Evaluated the model using Mean Absolute Error (MAE) and R-squared (R²) to assess its predictive accuracy.
+
+Data Visualization with Power BI:
+Imported the predictions (actual vs. predicted) into Power BI.
+Created interactive visualizations comparing actual vs. predicted Bitcoin prices.
+Built additional insights using error analysis (predicted error) and summary statistics.
+
+Model Saving and Export:
+Saved the trained RandomForestRegressor model as a .pkl file, allowing for reuse without retraining.
+Exported the predictions to a CSV file for use in Power BI and other applications.
+
+
+Technologies Used
+Python: Used for data processing, machine learning, and model training.
+Libraries: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn.
+Kaggle: The dataset was sourced from Kaggle, and data processing and model training were completed within a Kaggle notebook.
+Power BI: Used for visualizing predictions and analyzing model performance.
+
+
+Getting Started
+
+Clone the repository:
+bash
+Copy code
+git clone https://github.com/your-username/bitcoin-price-prediction.git
+cd bitcoin-price-prediction
+
+Install dependencies:
+Ensure you have Python installed. The following dependencies are required for this project:
+Copy code
+pip install pandas numpy scikit-learn matplotlib seaborn
+
+Run the code:
+You can execute the Python code in the provided Jupyter notebook (bitcoin_price_prediction.ipynb) or Kaggle notebook.
+The notebook will walk through the entire process, from loading the data to model evaluation.
+
+Power BI Integration:
+After running the model, you can open Power BI Desktop.
+Import the bitcoin_predictions.csv file into Power BI for visualization.
+Model Evaluation
+
+The model was evaluated using the following metrics:
+Mean Absolute Error (MAE): Measures the average magnitude of errors in the predictions.
+R-squared (R²): Indicates how well the model explains the variance in the target variable (Bitcoin closing prices).
+
+Future Improvements
+
+Hyperparameter Tuning: To improve model accuracy, experimenting with different configurations of the Random Forest model, such as adjusting the number of estimators or maximum depth, could be beneficial.
+Feature Engineering: Additional features such as sentiment analysis of news data or external factors could be included to improve predictions.
+Alternative Models: Exploring other regression models like Gradient Boosting or XGBoost may help improve predictive performance.
+
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
