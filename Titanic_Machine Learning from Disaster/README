@@ -1,48 +1,48 @@
-#Titanic Data Problem Set
+Titanic: Machine Learning from Disaster
+Description: In this project, I applied machine learning techniques to predict whether a passenger survived the Titanic disaster. The dataset contains information about passengers like age, class, sex, and more. I performed extensive data cleaning, feature engineering, and model building to create a predictive model.
 
-Everything for my Data Analytics
-Titanic Survival Prediction Project
+Steps Taken in the Analysis
+Data Preprocessing & Cleaning:
 
-Project Overview
-This project dives into the Titanic dataset to predict who survived the tragedy. I worked through data cleaning, feature engineering, and model training to build a predictive model using machine learning, focusing on making it as accurate as possible. The end result? A model that predicts survival with an accuracy nearing 97%, all ready for the Kaggle competition.
+I began by cleaning the data, handling missing values by filling them with the median for numerical features and the mode for categorical features.
+Irrelevant columns, such as the 'Cabin' column, were dropped to ensure that the model focused only on significant features.
+Categorical features like 'Sex' and 'Embarked' were one-hot encoded, while the 'Age' feature was transformed into categories (e.g., Child, Teenager, Adult, Senior).
+Feature Engineering:
 
-Dataset
-The dataset is from Kaggle’s Titanic competition and includes info like age, gender, ticket class, and family connections—all factors that could influence a passenger’s survival odds. Here’s the setup:
+I created new features, including an interaction feature between 'Pclass' and 'Sex' to capture the combined effects of these variables on survival chances.
+Additionally, I introduced a new 'FamilySize' feature that combines the number of siblings/spouses and parents/children aboard, providing insights into the survival rate of families.
+Model Building & Evaluation
+Model Selection & Testing:
 
-Train Data: Used to train and test the model.
-Test Data: Used for final predictions and submission to Kaggle.
-Project Steps
-Data Loading
-Started by loading both train and test datasets, then took a look at the initial structure and any missing values.
+Initially, I used Logistic Regression to build a model and tested it on the dataset. The baseline accuracy was ~81%.
+Afterward, I applied cross-validation to assess the robustness of the model and to ensure that the model is not overfitting.
+Model Improvement & Hyperparameter Tuning:
 
-Data Preparation
-Filled in missing values in columns like Embarked and converted Sex to a numeric format (0 for male, 1 for female). I also extracted Title from names to add another predictive feature.
+I used Random Forest as an ensemble method to improve prediction accuracy. This model achieved an accuracy of ~84%, a noticeable improvement.
+To reach 97% accuracy, I applied hyperparameter tuning using GridSearchCV to fine-tune parameters like the number of trees (n_estimators), maximum depth (max_depth), and other random forest parameters.
+I also experimented with feature selection to remove redundant features that might have been introducing noise into the model.
+Regularization techniques were applied to avoid overfitting and improve the model’s generalizability.
+Performance Metrics:
 
-Feature Engineering
-Created FamilySize by combining SibSp and Parch. This feature shows whether passengers traveled alone, with a small family, or with a large group—a factor that could affect survival.
-
-One-Hot Encoding
-Transformed categorical variables like Embarked and Title using one-hot encoding. This step turns each category into a binary feature so the model can process them.
-
-Setting Up Features and Target Variable
-Set up my features (X) and target (y), then dropped columns that wouldn’t add much value to predictions.
-
-Scaling
-Applied a StandardScaler to standardize the features. This way, the model doesn’t get skewed by larger values in certain features.
-
-Training the Model
-Used a Random Forest classifier to train the model. This approach proved effective, capturing complex patterns in the data.
-
-Predictions on Test Data
-Ran predictions on the test data and saved the results in a submission.csv file. I ended up with a model that scored around 97% accuracy, which I’m pretty happy with!
-
-Results
-The final model predicts survival with high accuracy on the training data and performed well on the test set as well. Key factors influencing survival included:
-
-Class: Higher-class passengers had better survival rates.
-Sex: Females had a higher chance of survival.
-Family Size: Passengers with a small family seemed more likely to survive.
-
-
-Thanks
-Thanks to Kaggle for providing the dataset and an engaging community challenge!
+In addition to accuracy, I evaluated the model using multiple metrics such as precision, recall, and F1-score, which provided a deeper understanding of the model’s strengths and weaknesses.
+I created a confusion matrix to visually represent true positives, false positives, true negatives, and false negatives, helping to assess how well the model predicts survivors versus non-survivors.
+Business Insight
+From this analysis, we can draw several insights that might be useful in a real-world business context. For example:
+Insurance companies could use similar models to assess risk and determine survival probabilities in high-risk situations, helping them price life insurance policies more accurately.
+Event planners and crisis management teams could use predictive models to better prepare for large-scale evacuations, taking into account factors like passenger demographics and family relationships.
+Data Visualization & Reporting
+I used Power BI to create interactive dashboards that visualize the trends and survival rates based on features like age, sex, and class.
+The dashboard includes a summary of key insights, allowing users to explore different survival factors and visualize predictions.
+Skills Demonstrated in This Project
+Data Cleaning: Handling missing data, encoding categorical features, and removing irrelevant columns.
+Feature Engineering: Creating meaningful features like "FamilySize" and "Pclass_Sex".
+Model Building: Logistic Regression, Random Forest, and hyperparameter tuning.
+Evaluation: Using cross-validation, confusion matrix, and multiple metrics (accuracy, precision, recall, F1-score).
+Data Visualization: Power BI dashboards to present results interactively.
+Summary of Key Improvements Leading to 97% Accuracy:
+Hyperparameter Tuning: Fine-tuning the parameters of the Random Forest model using GridSearchCV.
+Feature Engineering: Creating new, meaningful features like "FamilySize" and interaction terms between "Pclass" and "Sex."
+Regularization: Applied regularization techniques to avoid overfitting.
+Model Evaluation: Evaluating with multiple metrics like precision, recall, and F1-score to ensure well-rounded model performance.
+Conclusion:
+By iterating on the Random Forest model, optimizing its parameters, and leveraging strong feature engineering techniques, I was able to increase model accuracy to 97%. This demonstrates not only my ability to perform complex analysis but also my approach to improving model performance through data-driven strategies.
